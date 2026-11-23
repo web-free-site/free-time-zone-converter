@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-site.mjs && node scripts/inject-more-tools.mjs",
+    "build": "node scripts/build-site.mjs && node scripts/inject-more-tools.mjs && node scripts/inject-hub-legal.mjs",
     "preview": "npx --yes serve dist -l 4321"
   }
 }
