@@ -219,7 +219,7 @@ function pageShell({
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${esc(canonical)}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <meta name="theme-color" content="#0b1020">
@@ -231,6 +231,10 @@ function pageShell({
 ${ld}
 <script data-cfasync="false" src="${POPUNDER}"></script>
 <script src="https://ref.web-free.site/r.js" defer></script>
+<meta property="og:image" content="https://free-time-zone-converter.web-free.site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://free-time-zone-converter.web-free.site/og.png">
 </head>
 <body class="has-sidebar${article ? ' article-page' : ''}">
 <a class="skip-link" href="#main">Skip to content</a>
