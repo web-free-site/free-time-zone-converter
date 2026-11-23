@@ -1,28 +1,28 @@
-/* web-free.site ad loader for static guide/legal pages (Adsterra). Placeholder keys until deploy. */
+/* web-free.site ad loader for static guide/legal pages (Adsterra). Adsterra units. */
 (function () {
   "use strict";
   if (window.__wfAds) return;
   window.__wfAds = 1;
   var C = {
-      "pop": "https://abscloud.org/1/wf23bplaceholderpopunder00000000",
-      "social": "https://bauval.org/14/wf23bplaceholdersocialbar0000000",
-      "native": "https://bauval.org/21/wf23bplaceholdernativebanner0000",
-      "nativeId": "container-wf23bplaceholdernativebanner0000",
-      "smart": "https://araplhn.org/4/wf23bplaceholdersmartlink0000000",
+      "pop": "https://abscloud.org/1/cd4687bdff1b34c60ee463408abd0bb3",
+      "social": "https://bauval.org/14/148455b1aeb9f355c5f8852502b00f68",
+      "native": "https://bauval.org/21/f7b8906ea81d785da3010d106db6928e",
+      "nativeId": "container-f7b8906ea81d785da3010d106db6928e",
+      "smart": "https://araplhn.org/4/6a7faadfa724e1e3351978647be90aeb",
       "bannerBase": "https://bauval.org/22/{k}",
       "banners": {
-        "728x90": "wf23bplaceholderbanner728x900000",
-        "468x60": "wf23bplaceholderbanner468x600000",
-        "300x250": "wf23bplaceholderbanner300x250000",
-        "160x600": "wf23bplaceholderbanner160x600000",
-        "160x300": "wf23bplaceholderbanner160x300000",
-        "320x50": "wf23bplaceholderbanner320x500000"
+        "728x90": "475ec419b49bf7852d3feafa3b687924",
+        "468x60": "aa94cfbaea5a5bacf2db45a3ea71203c",
+        "300x250": "dba1845000addb21618c55a79ef1e8eb",
+        "160x600": "caa9d0b86ba5c047cf433e95ae1b5aad",
+        "160x300": "4852f67ea6d26e88b4324da1cb7eaaaf",
+        "320x50": "d56a3e2c4bd87d57b6564d9e8bf93ec3"
       }
     };
   var d = document;
   var html = (d.body ? d.body.innerHTML : "") + [].map.call(d.scripts, function (s) { return s.src || ""; }).join(" ");
   function has(k) { return html.indexOf(k) > -1; }
-  function keyOf(u) { var m = /wf23bplaceholder[0-9a-z]+/i.exec(u); return m ? m[0] : u; }
+  function keyOf(u) { var m = /[0-9a-f]{32}/i.exec(u); return m ? m[0] : u; }
   function addScript(src, parent) {
     if (has(keyOf(src))) return;
     var s = d.createElement("script");

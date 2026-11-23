@@ -8,7 +8,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = path.join(ROOT, 'public');
 const DIST = path.join(ROOT, 'dist');
 
-const POPUNDER = 'https://abscloud.org/1/wf23bplaceholderpopunder00000000';
+const POPUNDER = 'https://abscloud.org/1/cd4687bdff1b34c60ee463408abd0bb3';
 
 function esc(s) {
   return String(s)
@@ -382,6 +382,9 @@ function build() {
   copyRecursive(path.join(PUBLIC, 'js'), path.join(DIST, 'js'));
   fs.copyFileSync(path.join(PUBLIC, 'ads.json'), path.join(DIST, 'ads.json'));
   fs.copyFileSync(path.join(PUBLIC, 'wf-ads.js'), path.join(DIST, 'wf-ads.js'));
+  const indexNow = '65bf76a4fb2aa9b25bed1591af30ff49.txt';
+  const indexNowSrc = path.join(PUBLIC, indexNow);
+  if (fs.existsSync(indexNowSrc)) fs.copyFileSync(indexNowSrc, path.join(DIST, indexNow));
 
   writePage(
     '',
