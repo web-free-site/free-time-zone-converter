@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://free-time-zone-converter.web-free.site/sitemap.xml

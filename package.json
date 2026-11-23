@@ -1,0 +1,9 @@
+{
+  "name": "free-time-zone-converter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs && node scripts/inject-more-tools.mjs",
+    "preview": "npx --yes serve dist -l 4321"
+  }
+}
