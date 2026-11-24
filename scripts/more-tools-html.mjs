@@ -2,7 +2,7 @@
 
 const REF = 'time-zone-converter';
 const HUB = `https://web-free.site/?ref=${REF}`;
-const R = (slug) => `https://${slug}.web-free.site/?ref=${REF}`;
+const R = (slug, path = '/') => `https://${slug}.web-free.site${path}?ref=${REF}`;
 
 const WF_STYLE = `<style>
     .wf-more-tools{box-sizing:border-box;width:100%;margin:2.5rem 0 0;padding:1.5rem 1rem 5rem;border-top:1px solid rgba(0,0,0,.12);background:rgba(248,249,251,.97);color:#1a1a1a;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.5}
@@ -78,7 +78,7 @@ const categories = [
   [
     'Calculators &amp; currency',
     [
-      [R('free-online-calculator'), 'Free Online Calculator'],
+      [R('free-online-calculator', '/en/'), 'Free Online Calculator'],
       [R('free-currency-converter'), 'Free Currency Converter'],
       [R('free-unit-converter'), 'Free Unit Converter'],
       [R('free-loan-calculator'), 'Free Loan Calculator'],
